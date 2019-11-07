@@ -11,13 +11,13 @@
     <title>Currency Converter</title>
 </head>
 <body>
-<form method="post" action="/converter">
+<form method="get" action="/converter">
     <fieldset>
         <legend>Currency Converter</legend>
         <p>Rate: <input type="number" name="rate" placeholder="rate..." value="${rate}"></p>
         <p>USD: <input type="number" name="usd" placeholder="usd..." value="${usd}"></p>
         <p><input type="submit" value="Converter"></p>
-        <p>Result: <input type="number" value="${result}" disabled></p>
+        <p>VND: <input type="number" value="${vnd}" disabled></p>
     </fieldset>
 </form>
 </body>

@@ -12,13 +12,13 @@ public class ConverterController {
     public String index(){
         return "index";
     }
-    @PostMapping("/converter")
-    public String Convert(@RequestParam double rate, double usd, Model model){
+    @GetMapping("/converter")
+    public String Converter(@RequestParam double rate, double usd, Model model){
 
-        double result = rate * usd;
-        model.addAttribute("result",result);
         model.addAttribute("rate", rate );
         model.addAttribute("usd",usd);
+        double vnd = rate * usd;
+        model.addAttribute("vnd",vnd);
 
         return "index";
     }
